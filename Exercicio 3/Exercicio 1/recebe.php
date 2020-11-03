@@ -3,83 +3,201 @@
 $nome 	  = $_POST["nome"];
 $fone 	  = $_POST["fone"];
 $endereco = $_POST["endereco"];
+$numero = $_POST["numero"];
 $bairro   = $_POST["bairro"];
+$estado = $_POST["estado"];
 
-	// pedido pizza
-$codpizza1=$_POST["codpizza1"];
-if ($codpizza1 == 1){
-	$pizza1="Quatro Queijos";
-	$preco1=45;
+	// orçamento suporte técnico
+$codsuporte1 = $_POST["codsuporte1"];
+$nivelUrgencia1 = $_POST["nivelUrgencia1"];
+if ($codsuporte1 == 2){
+	$suporte1="Reparo no Sistema";
+	$suportepreco1=80;
 }
-elseif ($codpizza1 == 2){
-	$pizza1="Calabresa";
-	$preco1=42;
+elseif ($codsuporte1 == 3){
+	$suporte1="Treinamento de Utilização do Sistema";
+	$suportepreco1=90;
 }
-elseif ($codpizza1 == 3){
-	$pizza1="Margherita ";
-	$preco1=47;
+elseif ($codsuporte1 == 4){
+	$suporte1="Formatação de Máquina";
+	$suportepreco1=50;
+}
+elseif ($codsuporte1 == 5){
+	$suporte1="Backup de Dados";
+	$suportepreco1=40;
 }
 else{
-	$pizza1="Brócolis com Quiabo";
-	$preco1=37;
+	$suporte1="Reparo no Sistema";
+	$suportepreco1=80;
 }
 
-$qtd1=$_POST["qtd1"];
-$sub1 = $preco1 * $qtd1;
-
-
-$codpizza2=$_POST["codpizza2"];
-if ($codpizza2 == 1){
-	$pizza2=" ";
-	$preco2=0;
+if ($nivelUrgencia1 == 1){
+	$valueUrgencia1 = 0;
 }
-elseif ($codpizza2 == 2){
-	$pizza2="Quatro Queijos";
-	$preco2=45;
+elseif ($nivelUrgencia1 == 2){
+	$valueUrgencia1 = 25;
 }
-elseif ($codpizza2 == 3){
-	$pizza2="Calabresa";
-	$preco2=42;
-}
-elseif ($codpizza2 == 4){
-	$pizza2="Margherita ";
-	$preco2=47;
+elseif ($nivelUrgencia1 == 3){
+	$valueUrgencia1 = 50;
 }
 else{
-	$pizza2="Brócolis com Quiabo";
-	$preco2=37;
+	$valueUrgencia1 = 0;
 }
 
-$qtd2=$_POST["qtd2"];
-if ($qtd2 == 0){
-	$qtd2 = 1;
-}
-$sub2 = $preco2 * $qtd2;
+$sub1 = $suportepreco1 + $valueUrgencia1;
 
-	// pedido bebida
-$codbebida=$_POST["codbebida"];
-if ($codbebida == 1){
-	$bebida=" ";
-	$preco3=0;
-}	
-elseif ($codbebida == 2){
-	$bebida="coca cola";
-	$preco3=10;
+
+$codsuporte2 = $_POST["codsuporte2"];
+$nivelUrgencia2 = $_POST["nivelUrgencia2"];
+if ($codsuporte2 == 2){
+	$suporte2="Reparo no Sistema";
+	$suportepreco2=80;
 }
-elseif ($codbebida == 3){
-	$bebida="guaraná";
-	$preco3=9;
+elseif ($codsuporte2 == 3){
+	$suporte2="Treinamento de Utilização do Sistema";
+	$suportepreco2=90;
+}
+elseif ($codsuporte2 == 4){
+	$suporte2="Formatação de Máquina";
+	$suportepreco2=50;
+}
+elseif ($codsuporte2 == 5){
+	$suporte2="Backup de Dados";
+	$suportepreco2=40;
 }
 else{
-	$bebida ="suco";
-	$preco3=7;
+	$suporte2=" ";
+	$suportepreco2=0;
 }
 
-$qtdbebida=$_POST["qtdbebida"];
-if ($qtdbebida == 0){
-	$qtdbebida = 1;
+if ($nivelUrgencia2 == 1){
+	$valueUrgencia2 = 0;
 }
-$sub3 = $preco3 * $qtdbebida;
+elseif ($nivelUrgencia1 == 2){
+	$valueUrgencia2 = 25;
+}
+elseif ($nivelUrgencia1 == 3){
+	$valueUrgencia2 = 50;
+}
+else{
+	$valueUrgencia2 = 0;
+}
+
+$sub2 = $suportepreco2 + $valueUrgencia2;
+
+
+$codsuporte3 = $_POST["codsuporte3"];
+$nivelUrgencia3 = $_POST["nivelUrgencia3"];
+if ($codsuporte3 == 2){
+	$suporte3="Reparo no Sistema";
+	$suportepreco3=80;
+}
+elseif ($codsuporte3 == 3){
+	$suporte3="Treinamento de Utilização do Sistema";
+	$suportepreco3=90;
+}
+elseif ($codsuporte3 == 4){
+	$suporte3="Formatação de Máquina";
+	$suportepreco3=50;
+}
+elseif ($codsuporte3 == 5){
+	$suporte3="Backup de Dados";
+	$suportepreco3=40;
+}
+else{
+	$suporte3=" ";
+	$suportepreco3=0;
+}
+
+if ($nivelUrgencia3 == 1){
+	$valueUrgencia3 = 0;
+}
+elseif ($nivelUrgencia3 == 2){
+	$valueUrgencia3 = 25;
+}
+elseif ($nivelUrgencia3 == 3){
+	$valueUrgencia3 = 50;
+}
+else{
+	$valueUrgencia3 = 0;
+}
+
+$sub3 = $suportepreco3 + $valueUrgencia3;
+
+
+$codsuporte4 = $_POST["codsuporte4"];
+$nivelUrgencia4 = $_POST["nivelUrgencia4"];
+if ($codsuporte4 == 2){
+	$suporte4="Reparo no Sistema";
+	$suportepreco4=80;
+}
+elseif ($codsuporte4 == 3){
+	$suporte4="Treinamento de Utilização do Sistema";
+	$suportepreco4=90;
+}
+elseif ($codsuporte4 == 4){
+	$suporte4="Formatação de Máquina";
+	$suportepreco4=50;
+}
+elseif ($codsuporte4 == 5){
+	$suporte4="Backup de Dados";
+	$suportepreco4=40;
+}
+else{
+	$suporte4=" ";
+	$suportepreco4=0;
+}
+
+if ($nivelUrgencia4 == 1){
+	$valueUrgencia4 = 0;
+}
+elseif ($nivelUrgencia4 == 2){
+	$valueUrgencia4 = 25;
+}
+elseif ($nivelUrgencia4 == 3){
+	$valueUrgencia4 = 50;
+}
+else{
+	$valueUrgencia4 = 0;
+}
+
+$sub4 = $suportepreco4 + $valueUrgencia4;
+
+	// orçamento desenvolvimento web
+
+	$codweb = $_POST["codweb"];
+	$urgenciaweb = $_POST["urgenciaweb"];
+	if ($codweb == 2){
+		$desenvolvimentoweb="Site de Pequeno Porte";
+		$webpreco=80;
+	}
+	elseif ($codweb == 3){
+		$desenvolvimentoweb="Site de Médio Porte";
+		$webpreco=90;
+	}
+	elseif ($codweb == 4){
+		$desenvolvimentoweb="Site de Grande Porte";
+		$webpreco=50;
+	}
+	else{
+		$desenvolvimentoweb=" ";
+		$webpreco=0;
+	}
+	
+	if ($urgenciaweb == 1){
+		$valueUrgenciaweb = 0;
+	}
+	elseif ($urgenciaweb == 2){
+		$valueUrgenciaweb = 25;
+	}
+	elseif ($urgenciaweb == 3){
+		$valueUrgenciaweb = 50;
+	}
+	else{
+		$valueUrgenciaweb = 0;
+	}
+	
+	$sub5 = $webpreco + $valueUrgenciaweb;
 
 
 	// pedido sobremesa

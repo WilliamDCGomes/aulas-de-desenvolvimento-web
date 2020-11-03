@@ -1,0 +1,82 @@
+body {
+	background-color:#282629; 
+	margin-left: 20px;
+	margin-right: 20px;
+	text-align: justify;
+}
+
+input[type=radio]:checked + label {
+	color: greenyellow;
+}
+
+input[type=checkbox]:checked + label {
+	color: greenyellow;
+}
+
+header {
+	margin-top: 10px;
+}
+
+h1 {
+	color:#E4EDEC;
+	font-family: fantasy;
+	font-size: 50px; 	
+}
+
+h2 {
+	color: #39A297;
+	font-family: Daytona;
+	font-size: 36px; 	
+}
+
+h3 {
+	background-color:  #44D0C2;
+	font-family: Daytona;
+	font-size: 36px; 
+	text-align: center;	
+}
+
+h4 {
+	color: #8FD5CE;
+	font-family: Daytona;
+	font-size: 24px; 	
+}
+
+h5 {
+	color: white;
+	font-family: Daytona;
+	font-size: 18px; 	
+}
+
+p {
+	color: white;
+	font-family: Tahoma; 
+	font-size: 20px; 
+}
+
+g {
+	color: white;
+	font-family: Tahoma; 
+	font-size: 15px; 
+}
+
+footer {
+	margin-bottom: 30px;
+}
+
+.img_padrao {
+	margin-bottom: 20px;
+	width: 300px;
+	left: auto;
+}
+
+.time {
+	margin-bottom: 20px;
+	width: 150px;
+}
+
+.contato
+{
+	margin-bottom: 20px;
+	width: 40px;
+}

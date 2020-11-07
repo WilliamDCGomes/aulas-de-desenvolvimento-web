@@ -498,4 +498,60 @@ if ($receber2 == 1){
 echo "<h3>Forma de Pagamento</h3>";
 echo "Forma de Pagamento: $fpagto<br />";
 echo "Valor a pagar: " . round($vtotal, 2) . "<br /><br /><br />";	
+
+	// INSERINDO OS DADOS NO BANCO
+	// conectando bando de dados com o formulário
+require("conecta_banco.php");
+
+		// gravando dados cliente
+		$mysqli->query("INSERT INTO orderGlass (clientName, phoneClient, adressClient, houseNumber, neighborhood, stateClient) VALUES ('$nome','$fone','$endereco','$numero','$bairro', '$state')");
+
+		// gravando dados serviços escolhido
+		$mysqli->query("INSERT INTO budgetService (clientName, phoneClient, choosedService, serviceValue, urgenceService) VALUES ('$nome','$fone','$suporte1','$suportepreco1','$urgencia1')");
+		if ($codsuporte2 <> 1){
+			$mysqli->query("INSERT INTO budgetService (clientName, phoneClient, choosedService, serviceValue, urgenceService) VALUES ('$nome','$fone','$suporte2','$suportepreco2','$urgencia2')");	
+		}
+		if ($codsuporte3 <> 1){
+			$mysqli->query("INSERT INTO budgetService (clientName, phoneClient, choosedService, serviceValue, urgenceService) VALUES ('$nome','$fone','$suporte3','$suportepreco3','$urgencia3')");
+		}
+		if ($codsuporte4 <> 1){
+			$mysqli->query("INSERT INTO budgetService (clientName, phoneClient, choosedService, serviceValue, urgenceService) VALUES ('$nome','$fone','$suporte4','$suportepreco4','$urgencia4')");
+		}
+
+		// gravando dados da construção de sites
+		if ($codweb <> 1){
+			$mysqli->query("INSERT INTO budgetWEB (clientName, phoneClient, serviceValue, urgenceService) VALUES ('$nome','$fone','$webpreco','$urgencia5')");
+		}
+		
+		// gravando dados da construção de softwares
+		if ($codsoftware <> 1){
+			$mysqli->query("INSERT INTO budgetSoftware (clientName, phoneClient, serviceValue, urgenceService) VALUES ('$nome','$fone','$softwarepreco','$urgencia6')");
+		}
+		
+		// gravando dados da construção de aplicativos mobile
+		if ($codmobile <> 1){
+			$mysqli->query("INSERT INTO budgetMobile (clientName, phoneClient, serviceValue, urgenceService) VALUES ('$nome','$fone','$mobilepreco','$urgencia7')");	
+		}
+
+		// gravando dados da consultoria
+		$mysqli->query("INSERT INTO consulting (clientName, phoneClient, valueConsulting) VALUES ('$nome','$fone','$taxaconsultoria')");
+
+		// gravando dados de mensagens de promoção
+		if ($receber1 == 1 && $receber2 == 1){
+			$mysqli->query("INSERT INTO offerMessages (clientName, phoneClient, newPromotionsNotification, newProductsNotification) VALUES ('$nome','$fone','true', 'true'");
+		}
+		elseif ($receber1 == 0 && $receber2 == 1){
+			$mysqli->query("INSERT INTO offerMessages (clientName, phoneClient, newPromotionsNotification, newProductsNotification) VALUES ('$nome','$fone','false', 'true'");
+		}
+		elseif ($receber1 == 1 && $receber2 == 0){
+			$mysqli->query("INSERT INTO offerMessages (clientName, phoneClient, newPromotionsNotification, newProductsNotification) VALUES ('$nome','$fone','true', 'false'");
+		}
+		elseif ($receber1 == 0 && $receber2 == 1){
+			$mysqli->query("INSERT INTO offerMessages (clientName, phoneClient, newPromotionsNotification, newProductsNotification) VALUES ('$nome','$fone','false', 'false'");
+		}
+
+		// gravando dados da forma de pagamento
+		$mysqli->query("INSERT INTO paymentForm (clientName, phoneClient, form, totalValue) VALUES ('$nome','$fone','$fpagto', '$vtotal')");
+
+echo $mysqli->error;
 ?> 

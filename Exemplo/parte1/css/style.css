@@ -1,0 +1,96 @@
+body {
+	background-color: #F5F6CE; 
+	margin-left: 30px;
+	margin-right: 30px;
+	text-align: justify;
+}
+
+header {
+	margin-top: 30px;
+}
+
+h1 {
+	color: red;
+	font-family: Impact;
+	font-size: 48px;
+	text-align: center;		
+}
+
+h2 {
+	color: #8A0829;
+	font-family: Daytona;
+	font-size: 36px; 	
+}
+
+p {
+	color: red;
+	font-family: Tahoma; 
+	font-size: 20px; 
+}
+
+footer {
+	margin-bottom: 30px;
+}
+
+.padrao1 {
+	color: blue;
+	font-family: Tahoma; 
+	font-size: 32px; 	
+}
+
+.padrao2 {
+	color: green;
+	font-family: Impact; 
+	font-size: 30px; 	
+}
+
+.img_padrao {
+	margin-bottom: 20px;
+	width: 260px;
+}
+
+.time {
+	margin-bottom: 20px;
+	width: 150px;
+}
+
+.contato {
+	margin-bottom: 20px;
+	width: 40px;
+}
+
+
+.galeria {
+	margin: 5%;
+}
+
+.item {
+	float: left;
+	border: 5px solid gray;
+	margin: 7px;
+}
+
+.texto {
+	float: left;
+	margin: 7px;	
+	border: 6px solid gray;
+	width: 550px;
+	height: 100px;	
+	color: blue;
+	font-family: arial;
+	font-size: 18px;
+	text-align: justify;		
+}
+
+.itemfoto {
+	width: 150px;
+	height: 150px;
+}
+
+.limpa {
+	clear:left;
+}
+
+
+
+

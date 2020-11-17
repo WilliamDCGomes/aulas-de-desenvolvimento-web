@@ -538,16 +538,16 @@ require("conecta_banco.php");
 
 		// gravando dados de mensagens de promoção
 		if ($receber1 == 1 && $receber2 == 1){
-			$mysqli->query("INSERT INTO offerMessages (clientName, phoneClient, newPromotionsNotification, newProductsNotification) VALUES ('$nome','$fone','true', 'true'");
+			$mysqli->query("INSERT INTO offerMessages (clientName, phoneClient, newPromotionsNotification, newProductsNotification) VALUES ('$nome','$fone','1', '1')");
 		}
 		elseif ($receber1 == 0 && $receber2 == 1){
-			$mysqli->query("INSERT INTO offerMessages (clientName, phoneClient, newPromotionsNotification, newProductsNotification) VALUES ('$nome','$fone','false', 'true'");
+			$mysqli->query("INSERT INTO offerMessages (clientName, phoneClient, newPromotionsNotification, newProductsNotification) VALUES ('$nome','$fone','0', '1')");
 		}
 		elseif ($receber1 == 1 && $receber2 == 0){
-			$mysqli->query("INSERT INTO offerMessages (clientName, phoneClient, newPromotionsNotification, newProductsNotification) VALUES ('$nome','$fone','true', 'false'");
+			$mysqli->query("INSERT INTO offerMessages (clientName, phoneClient, newPromotionsNotification, newProductsNotification) VALUES ('$nome','$fone','1', '0')");
 		}
 		elseif ($receber1 == 0 && $receber2 == 1){
-			$mysqli->query("INSERT INTO offerMessages (clientName, phoneClient, newPromotionsNotification, newProductsNotification) VALUES ('$nome','$fone','false', 'false'");
+			$mysqli->query("INSERT INTO offerMessages (clientName, phoneClient, newPromotionsNotification, newProductsNotification) VALUES ('$nome','$fone','0', '0')");
 		}
 
 		// gravando dados da forma de pagamento

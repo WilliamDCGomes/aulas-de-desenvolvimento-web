@@ -27,6 +27,7 @@
 			</h3>					
 		</nav>
 	</div>
+	<br />
 	<section id="inicio">
 		<div align ="Center">
 				<img src="img1/LogoGlass.png">
@@ -47,6 +48,9 @@
 			<div class="limpa"> </div>	
 		</div>       
 	</section>
+	<div align = "Center">
+		<a href="pedido/index.php" target="_self"><input type="submit" value="CLIQUE AQUI E FAÇA SEU ORÇAMENTO AGORA!" class="button"> </a>
+	</div>
 	<section id="sobre">
 		<h2>Sobre</h2>
 		<header>

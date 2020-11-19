@@ -22,7 +22,11 @@
 		<div align ="Center">
 				<h1>Cell Bytes</h1>
 		</div>
+		<div align = "Center">
+				<a href="../index.php" target="_self"><input type="submit" value="PÁGINA INICIAL!" class="button"> </a>
+		</div>
 	</section>
+	</br></br></br>
 	<form method="POST" action="NovoUsuario/recebe.php">
 		<section id="newUser">
 			<div align ="Center">

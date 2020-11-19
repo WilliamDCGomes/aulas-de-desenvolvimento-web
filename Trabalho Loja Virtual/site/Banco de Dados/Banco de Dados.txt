@@ -1,3 +1,4 @@
+drop database cellBytes;
 create database cellBytes;
 use cellBytes;
 create table product(

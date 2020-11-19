@@ -19,7 +19,9 @@
 				&nbsp&nbsp&nbsp
 				<a href="#contato">CONTATO</a>	
 				&nbsp&nbsp&nbsp
-				<a href="login/index.php" target="_blank">ADMIN</a>	
+				<a href="Carrinho/index.php" target="_self">CARRINHO</a>	
+				&nbsp&nbsp&nbsp
+				<a href="login/index.php" target="_self">ADMIN</a>	
 			</h3>					
 		</nav>
 	</div>
@@ -29,7 +31,7 @@
 				<h1>Cell Bytes</h1>
 		</div>
 		<div align = "Center">
-			<a href="pedido/index.php" target="_self"><input type="submit" value="CLIQUE AQUI E FAÇA SEU PEDIDO AGORA!" class="button"> </a>
+			<a href="Products/index.php" target="_self"><input type="submit" value="CLIQUE AQUI E FAÇA SEU PEDIDO AGORA!" class="button"> </a>
 		</div>
 	</section>
 	<section id="sobre">
@@ -74,25 +76,28 @@
 		<?php
 			require("banco/conecta_banco.php");
 			$link = mysqli_connect("localhost", "root", "", "cellBytes");
-			$result = mysqli_query($link, "SELECT nameProduct, imageAdress1, imageAdress2, descricao, price from product");
+			$result = mysqli_query($link, "SELECT id, nameProduct, imageAdress1, imageAdress2, descricao, price from product");
 			$foi = false;
 			while($row = mysqli_fetch_row($result)){
 				$foi = true;
+				echo "<form method='POST' action='adicionarCarrinho/recebe.php'>";
 				echo "<div align = 'left'>";
-				echo "<h4>".$row[0]."</h4>";
+				echo "<h4>Código do Produto:</h4> <input type='text' name= 'codProd' value = '$row[0]' size='8' maxlength='10' /><br />";
+				echo "<h4>".$row[1]."</h4>";
 				echo "</div>";
-				echo "<div align ='left'><img src='".$row[1]."' class='img_padrao'>";
+				echo "<div align ='left'><img src='".$row[2]."' class='img_padrao'>";
 				echo "&nbsp&nbsp&nbsp";
-				echo "<img src='".$row[2]."' class='img_padrao'></div>";
-				echo $row[2];
+				echo "<img src='".$row[3]."' class='img_padrao'></div>";
 				echo "</br>";
 				echo "<b>Descrição</b>";
-				echo "<p>".$row[3]."</p>";
+				echo "<p>".$row[4]."</p>";
 				echo "<div align = 'left'>";
-				echo "<p1>R$ ".$row[4]."</p1>";
+				echo "<p1>R$ ".$row[5]."</p1>";
+				echo "<h4>Quantidade desejada:</h4> <input type='text' name= 'quantProd' value = 1 size='8' maxlength='10' /><br />";
 				echo "</br></br>";
-				echo "<a href='pedido/index.php' target='_self'><input type='submit' value='ADICIONAR AO CARRINHO!' class='button'> </a>";
+				echo "<a href='adicionarCarrinho/recebe.php' target='_self'><input type='submit' value='ADICIONAR AO CARRINHO!' class='button'> </a>";
 				echo "</div>";
+				echo "</form>";
 				echo "</br>";
 			}
 			if(!$foi){
@@ -112,9 +117,9 @@
 			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 			<img src="img1/instagramIcon.png" class="contato">
 		</div>
-		<p><a href="tel:1400000-0000">(14) xxxxx-xxxx</a>
+		<p><a href="tel:1400000-0000">(14) XXXXX-XXXX</a>
 		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-		<a href="mailto:williamdouglasgomes@gmail.com">williamdouglasgomes@gmail.com</a>
+		<a href="mailto:williamdouglasgomes@hotmail.com">williamdouglasgomes@hotmail.com</a>
 		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		<a href="https://www.facebook.com" target="_blank">CellBytes Facebook</a>	
 		&nbsp&nbsp&nbsp
@@ -134,6 +139,8 @@
 				<a href="#produtos">PRODUTOS</a>
 				&nbsp&nbsp&nbsp
 				<a href="#contato">CONTATO</a>	
+				&nbsp&nbsp&nbsp
+				<a href="Carrinho/index.php" target="_blank">CARRINHO</a>	
 				&nbsp&nbsp&nbsp
 				<a href="login/index.php" target="_blank">ADMIN</a>	
 			</h3>					

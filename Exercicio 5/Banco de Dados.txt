@@ -1,0 +1,25 @@
+create database trabalho5;
+use trabalho5;
+create table vendaProduct(
+	id int not null primary key auto_increment,
+    codProd varchar(20) not null,
+    nameProduct varchar(50) not null,
+    quantity int not null,
+    price varchar(10) not null,
+    subPrice varchar(10) not null
+);
+create table client(
+	id int not null primary key auto_increment,
+    nameClient varchar(50) not null,
+    rg varchar(20) not null,
+    cpf varchar(50) not null,
+    age varchar(8) not null,
+    email varchar(40) not null,
+    phone varchar(20) not null
+);
+create table paymentForm(
+	id int not null primary key auto_increment,
+    descPayment varchar(50) not null,
+    descParcela varchar(50) not null,
+    descont varchar(10) not null
+);

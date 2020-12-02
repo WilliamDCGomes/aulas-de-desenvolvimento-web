@@ -61,7 +61,7 @@ if (isset($_POST["botao"])) {
 	}
 
 	if ($erro_validacao == 0) {
-		Header("Location: confirma.php");
+		Header("Location: etapa3.php");
 	}
 }
 ?>

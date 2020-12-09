@@ -8,5 +8,6 @@
 	<h2>Cadastros</h2>
 	<div><a href="cadcli.php">Clientes</a></div>
 	<div><a href="cadservice.php">Serviços</a></div>	
+	<div><a href="cadfor.php">Fornecedor</a></div>	
 </body>
 </html>

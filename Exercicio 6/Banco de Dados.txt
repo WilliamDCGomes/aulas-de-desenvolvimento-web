@@ -1,0 +1,26 @@
+create database trabalho6;
+use trabalho6;
+create table service(
+	id int not null primary key auto_increment,
+    nomeService varchar(20) not null,
+    precoPorHora varchar(10) not null,
+    tempoPrevisto varchar(6) not null,
+    tempoReal varchar(6) default null,
+    tecnicoResponsavel varchar(50) not null
+);
+create table cliente(
+	id int not null primary key auto_increment,
+    nome varchar(50) not null,
+    cpf varchar(15) not null,
+    rg varchar(15) not null,
+    nascimento varchar(10) default null,
+    endereco varchar(50) not null
+);
+create table fornecedor(
+	id int not null primary key auto_increment,
+    nome varchar(50) not null,
+    cnpj varchar(20) not null,
+    cep varchar(15) not null,
+    endereco varchar(50) default null,
+    telefone varchar(15) not null
+);

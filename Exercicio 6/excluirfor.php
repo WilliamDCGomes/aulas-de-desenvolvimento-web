@@ -7,9 +7,9 @@
 	<?php 
 	if(isset($_GET["excluir"])){
 
-		$idcli = htmlentities($_GET["excluir"]);
+		$id = htmlentities($_GET["excluir"]);
 		require("conecta.php");
-		$mysqli->query("delete from tb_clientes where idcli = '$idcli'");
+		$mysqli->query("delete from fornecedor where id = '$id'");
 		echo $mysqli->error;
 		if ($mysqli->error==""){
 

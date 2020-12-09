@@ -9,7 +9,7 @@
 
 		$idcli = htmlentities($_GET["excluir"]);
 		require("conecta.php");
-		$mysqli->query("delete from tb_clientes where idcli = '$idcli'");
+		$mysqli->query("delete from cliente where id = '$idcli'");
 		echo $mysqli->error;
 		if ($mysqli->error==""){
 

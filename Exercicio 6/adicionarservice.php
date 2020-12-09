@@ -27,7 +27,6 @@ if(isset($_POST["botao"])){
 
 	require("conecta.php");
 
-	//$nome=$_POST["nome"];
 	$nome=htmlentities($_POST["nome"]);	
 	$preco=htmlentities($_POST["preco"]);
 	$tempoPrevisto=htmlentities($_POST["tempoPrevisto"]);

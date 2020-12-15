@@ -8,11 +8,19 @@
 </head>
 
 <body>
-	<h2>Clientes</h2>
-	<p>Nossos clientes ficaram muito satisfeitos com os nossos serviços</p>
-	<div><img src="imagem/cli1.jpg" class="img_padrao"></div>
-	<div><img src="imagem/cli2.jpg" class="img_padrao"></div>		
-
+	<div align = "center" class="linha6">
+		<h1>Clientes</h1>	
+	</div>	
+	<br>
+	<div class="linha7" align = "center">
+		<p>
+			Adicionar um novo cliente &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="?pagina=8"><button>Adicionar</button></a>
+			<br>
+			Localizar clientes &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="?pagina=9"><button>Pesquisar</button></a>
+			<br>
+			Alterar ou apagar clientes &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="?pagina=10"><button>Alterar</button></a>
+		</p>
+	</div>
 </body>
 
 </html>

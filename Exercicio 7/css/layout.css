@@ -88,7 +88,7 @@
 }
 
 .linha2 {
-	min-height: 365px;
+	min-height: 210px;
 	background:#39A297;
 	border: 2px solid white;
 }
@@ -104,6 +104,26 @@
 }
 .linha5 {
 	max-width: 1000px;
+	background:#39A297;
+	float: center;
+}
+.linha6 {
+	min-height: 110px;
+	background:#39A297;
+	border: 2px solid white;
+}
+.linha7 {
+	max-width: 400px;
+	background:#39A297;
+	float: center;
+}
+.linha8 {
+	min-height: 110px;
+	background:#39A297;
+	border: 2px solid white;
+}
+.linha9 {
+	max-width: 600px;
 	background:#39A297;
 	float: center;
 }

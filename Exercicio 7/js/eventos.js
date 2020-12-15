@@ -37,4 +37,9 @@ document.getElementsByClassName("foto")[4].onclick = function() {
 document.getElementsByClassName("foto")[5].onclick = function() {
 	window.open("imagem/planta6.png", "minhaJanela", "height=350,width=500");
 }
+function confirma_exclusao(id){
+	if(window.confirm("Tem certeza de que deseja excluir?")){
+		window.open("php/excluircli.php?excluir=" + id, "");
+	}
+}
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Cacareco 2</title>
+	<title>Glass Byte</title>
 	<link rel="stylesheet" type="text/css" href="css/layout.css">
 </head>
 <body>		
@@ -32,30 +32,40 @@
 	<br>
 	<div class="linha2" align = "Center">
 		<?php
-		$valide = false;
-		if (isset($_GET["pagina"])) {
-			$pagina = $_GET["pagina"];
-			if ($pagina == 1) {
+			$valide = false;
+			if (isset($_GET["pagina"])) {
+				$pagina = $_GET["pagina"];
+				if ($pagina == 1) {
+					require ("php/home.php");
+					$valide = true;
+				}
+				elseif ($pagina == 2) {
+					require ("php/clientes.php");
+					$valide = false;
+				}
+				elseif ($pagina == 3) {
+					require ("php/parceiros.php");
+					$valide = false;
+				}
+				elseif ($pagina == 4) {
+					require ("php/galeria.php");
+					$valide = false;
+				}	
+				elseif ($pagina == 8) {
+					require ("php/adicionarcli.php");
+					
+				}
+				elseif ($pagina == 9) {
+					require ("php/pesquisarcli.php");
+				}	
+				elseif ($pagina == 10) {
+					require ("php/cadcli.php");
+				}	
+			} 
+			else {
 				require ("php/home.php");
 				$valide = true;
 			}
-			elseif ($pagina == 2) {
-				require ("php/clientes.php");
-				$valide = false;
-			}
-			elseif ($pagina == 3) {
-				require ("php/parceiros.php");
-				$valide = false;
-			}
-			elseif ($pagina == 4) {
-				require ("php/galeria.php");
-				$valide = false;
-			}			
-		} 
-		else {
-			require ("php/home.php");
-			$valide = true;
-		}
 		?>
 	</div>	
 	<br>

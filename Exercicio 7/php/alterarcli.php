@@ -45,7 +45,7 @@
 					<br/>
 					RG: <input type="text" name="rg" value="<?php echo $rg ?>">
 					<br/>
-						Data de Nascimento: <input type="text" name="nascimento" value="<?php echo $nascimento ?>">
+					Data de Nascimento: <input type="text" name="nascimento" value="<?php echo $nascimento ?>">
 					<br/>
 					Endereço: <input type="text" name="endereco" value="<?php echo $endereco ?>">
 					<br/><br/>

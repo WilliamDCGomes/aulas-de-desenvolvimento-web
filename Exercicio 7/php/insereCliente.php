@@ -1,16 +1,13 @@
 <?php 
 	if(isset($_POST["cadastreClient"])){
 		require("../banco/conecta.php");
-
 		$nome=htmlentities($_POST["nome"]);	
 		$cpf=htmlentities($_POST["cpf"]);
 		$rg=htmlentities($_POST["rg"]);
 		$nascimento=htmlentities($_POST["nascimento"]);
 		$endereco=htmlentities($_POST["endereco"]);
-
 		$mysqli->query("insert into cliente (nome, cpf, rg, nascimento, endereco) values('$nome', '$cpf', '$rg', '$nascimento', '$endereco')");
 		echo $mysqli->error;
-
 		if($mysqli->error == ""){
 			echo "<link rel='stylesheet' type='text/css' href='../css/layout.css'>";
 			echo "<div class='topo'>";
@@ -28,35 +25,6 @@
 			echo "<p>Inserido com sucesso<br />";
 			echo "<a href='../index.php'> Voltar</a></p>";
 			echo "</div>";
-			if (isset($_GET["pagina"])) {
-				$pagina = $_GET["pagina"];
-				if ($pagina == 1) {
-					require ("php/home.php");
-					$valide = true;
-				}
-				elseif ($pagina == 2) {
-					require ("php/clientes.php");
-					$valide = false;
-				}
-				elseif ($pagina == 3) {
-					require ("php/parceiros.php");
-					$valide = false;
-				}
-				elseif ($pagina == 4) {
-					require ("php/galeria.php");
-					$valide = false;
-				}	
-				elseif ($pagina == 8) {
-					require ("php/adicionarcli.php");
-					
-				}
-				elseif ($pagina == 9) {
-					require ("php/pesquisarcli.php");
-				}	
-				elseif ($pagina == 10) {
-					require ("php/cadcli.php");
-				}	
-			} 
 		}
 	}
 ?>

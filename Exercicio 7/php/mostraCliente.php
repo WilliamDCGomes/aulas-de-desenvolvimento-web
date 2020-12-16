@@ -3,8 +3,6 @@
 
 		require("../banco/conecta.php");
 		$nomecli=htmlentities($_POST["nomecli"]);
-
-			// gravando dados
 		$query = $mysqli->query("select * from cliente where nome like '%$nomecli%'");
 		echo $mysqli->error;
 		echo "<link rel='stylesheet' type='text/css' href='../css/layout.css'>";

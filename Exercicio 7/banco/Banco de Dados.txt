@@ -1,0 +1,48 @@
+create database trabalho7;
+use trabalho7;
+create table service(
+	id int not null primary key auto_increment,
+    nomeService varchar(50) not null,
+    precoPorHora varchar(15) not null,
+    tempoPrevisto varchar(5) not null,
+    tempoReal varchar(5) default null,
+    tecnicoResponsavel varchar(50) not null
+);
+create table cliente(
+	id int not null primary key auto_increment,
+    nome varchar(50) not null,
+    cpf varchar(15) not null,
+    rg varchar(15) not null,
+    nascimento varchar(10) default null,
+    endereco varchar(50) not null
+);
+create table fornecedor(
+	id int not null primary key auto_increment,
+    nome varchar(50) not null,
+    cnpj varchar(20) not null,
+    cep varchar(15) not null,
+    endereco varchar(50) default null,
+    telefone varchar(15) not null
+);
+create table produto(
+	id int not null primary key auto_increment,
+    nomeProd varchar(50) not null,
+    custo varchar(15) not null,
+    preco varchar(15) not null,
+    quantidade int default 0,
+    marca varchar(50) not null
+);
+create table trabalheConosco(
+	id int not null primary key auto_increment,
+    nome varchar(50) not null,
+    email varchar(50) not null,
+    endereco varchar(50) not null,
+    telefone varchar(15) not null,
+    experiencia1 varchar(50) default null,
+    experiencia2 varchar(50) default null,
+    experiencia3 varchar(50) default null,
+    formacao1 varchar(50) default null,
+    formacao2 varchar(50) default null,
+    formacao3 varchar(50) default null,
+    area varchar(30) default null
+);

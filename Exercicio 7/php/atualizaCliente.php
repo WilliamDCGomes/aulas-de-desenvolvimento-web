@@ -1,15 +1,12 @@
 <?php 
 require("../banco/conecta.php");
 if(isset($_POST["botao"])){
-
 	$id=htmlentities($_POST["id"]);	
 	$nome=htmlentities($_POST["nome"]);	
 	$cpf=htmlentities($_POST["cpf"]);
 	$rg=htmlentities($_POST["rg"]);
 	$nascimento=htmlentities($_POST["nascimento"]);
 	$endereco=htmlentities($_POST["endereco"]);
-
-
 	$mysqli->query("update cliente set nome = '$nome', cpf='$cpf', rg = '$rg', nascimento = '$nascimento', endereco = '$endereco' where id = '$id'");
 	echo $mysqli->error;
 	if ($mysqli->error == "") {
@@ -30,35 +27,6 @@ if(isset($_POST["botao"])){
         echo "<br>";
 		echo "<a href='../index.php'> Voltar</a></p>";
 		echo "</div>";
-		if (isset($_GET["pagina"])) {
-			$pagina = $_GET["pagina"];
-			if ($pagina == 1) {
-				require ("home.php");
-				$valide = true;
-			}
-			elseif ($pagina == 2) {
-				require ("clientes.php");
-				$valide = false;
-			}
-			elseif ($pagina == 3) {
-				require ("parceiros.php");
-				$valide = false;
-			}
-			elseif ($pagina == 4) {
-				require ("galeria.php");
-				$valide = false;
-			}	
-			elseif ($pagina == 8) {
-				require ("adicionarcli.php");
-				
-			}
-			elseif ($pagina == 9) {
-				require ("pesquisarcli.php");
-			}	
-			elseif ($pagina == 10) {
-				require ("cadcli.php");
-			}	
-		} 
 	}
 }
 

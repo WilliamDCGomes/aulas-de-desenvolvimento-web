@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Página do Encanador</title>
+	<title>Glass Byte</title>
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 

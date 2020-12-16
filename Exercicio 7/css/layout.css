@@ -145,7 +145,7 @@
 
 
 .linha-galeria {
-	height: 700px;
+	height: 1100px;
 }
 
 .linha-galeria .album {
@@ -162,28 +162,36 @@
 }
 
 .linha-galeria .album .foto:nth-child(1) {
-	background: url("../imagem/planta1.png") no-repeat center;
-	background-size: 250px auto;
+	background: url("../imagem/site.jpg") no-repeat center;
+	background-size: 300px auto;
 }
 .linha-galeria .album .foto:nth-child(2) {
-	background: url("../imagem/planta2.png") no-repeat center;
-	background-size: 250px auto;
+	background: url("../imagem/sistema.jpg") no-repeat center;
+	background-size: 300px auto;
 }
 .linha-galeria .album .foto:nth-child(3) {
-	background: url("../imagem/planta3.png") no-repeat center;
-	background-size: 250px auto;
+	background: url("../imagem/mobile.jpg") no-repeat center;
+	background-size: 300px auto;
 }
 .linha-galeria .album .foto:nth-child(4) {
-	background: url("../imagem/planta4.png") no-repeat center;
-	background-size: 250px auto;
+	background: url("../imagem/suporte.jpg") no-repeat center;
+	background-size: 300px auto;
 }
 .linha-galeria .album .foto:nth-child(5) {
-	background: url("../imagem/planta5.png") no-repeat center;
-	background-size: 250px auto;
+	background: url("../imagem/cliente.png") no-repeat center;
+	background-size: 300px auto;
 }
 .linha-galeria .album .foto:nth-child(6) {
-	background: url("../imagem/planta6.png") no-repeat center;
-	background-size: 250px auto;
+	background: url("../imagem/colaboradores.jpg") no-repeat center;
+	background-size: 300px auto;
+}
+.linha-galeria .album .foto:nth-child(7) {
+	background: url("../imagem/ambiente.jpg") no-repeat center;
+	background-size: 300px auto;
+}
+.linha-galeria .album .foto:nth-child(8) {
+	background: url("../imagem/lider.jpg") no-repeat center;
+	background-size: 300px auto;
 }
 
 body {

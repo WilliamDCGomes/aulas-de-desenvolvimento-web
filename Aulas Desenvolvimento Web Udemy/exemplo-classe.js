@@ -9,5 +9,7 @@ class Test {
 }
 
 const obj = new Test("Teste")
+obj.nome = "William"
 
 console.log(obj.testando())
+console.log(obj.nome)

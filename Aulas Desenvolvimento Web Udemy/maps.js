@@ -4,6 +4,10 @@ let resultado = nums.map(function(e) {
     return e * 2
 })
 
+Array.prototype.map2 = function(callback){
+    callback(this.map(getPreco))
+}
+
 const carrinho = [
     '{ "nome": "Borracha", "preco": 3.45}',
     '{ "nome": "Caderno", "preco": 13.90}',
@@ -13,5 +17,7 @@ const carrinho = [
 
 const getPreco = e => `R$ ${JSON.parse(e)["preco"]}`
 
-console.log(carrinho.map(getPreco))
+carrinho.map2(function(valor) {
+    console.log(valor)
+})
 

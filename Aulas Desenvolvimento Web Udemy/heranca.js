@@ -25,3 +25,10 @@ const filho = {
 }
 
 console.log(filho.attr1)
+
+const teste = Object.create(filho)
+const teste2 = filho;
+
+console.log(teste)
+console.log(teste2)
+console.log(teste == teste2)

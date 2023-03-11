@@ -1,0 +1,45 @@
+body {
+  background-color: #222222;
+  padding: 0px 2em;
+}
+
+.titulo {
+  color: white;
+  text-align: center;
+  font-size: 3em;
+}
+
+.divcinemas {
+  background-color: #595959;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  margin-bottom: 3em;
+  text-align: center;
+}
+
+.cardCinema {
+  width: 20%;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+.divFilmes {
+  display: inline-flex;
+  margin-bottom: 3em;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+h2 {
+  color: white;
+  margin-bottom: 2em;
+}
+
+h3 {
+  color: white;
+  text-align: center;
+}
+
+a {
+  color: white;
+}

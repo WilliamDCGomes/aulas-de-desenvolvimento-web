@@ -1,0 +1,17 @@
+{
+  "workbench.colorTheme": "Origamid Next",
+  "workbench.iconTheme": "origamid-next-icons",
+  "editor.fontSize": 22,
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.wordWrap": "on",
+  "editor.minimap.renderCharacters": false,
+  "breadcrumbs.filePath": "off",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "editor.formatOnSave": true,
+  "html.format.wrapLineLength": 0,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  }
+}

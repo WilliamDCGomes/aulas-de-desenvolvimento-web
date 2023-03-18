@@ -10,6 +10,8 @@
   "liveServer.settings.donotVerifyTags": true,
   "editor.formatOnSave": true,
   "html.format.wrapLineLength": 0,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 250,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"

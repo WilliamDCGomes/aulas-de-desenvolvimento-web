@@ -45,7 +45,7 @@ span {
   text-decoration: none;
   border-radius: 4px;
   font-size: 20px;
-  grid-column: 1 / -1;
+  grid-row: 4;
 }
 
 .item {
@@ -65,19 +65,17 @@ span {
 .grid-diferente {
   display: grid;
   gap: 20px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 20px auto auto;
 }
 
 .foto {
   grid-column: 1 / -1;
+  grid-row: 3;
 }
 
 .titulo {
   text-align: left;
-}
-
-.descricao {
-  grid-column: 1/ -1;
 }
 
 .preco {
@@ -86,7 +84,19 @@ span {
   border-radius: 4px;
 }
 
+.body-diferente .preco {
+  place-self: start end;
+}
+
+.body-diferente .comprar-diferente {
+  place-self: center;
+}
+
 img {
   max-width: 100%;
   border-radius: 4px;
+}
+
+.texto {
+  grid-area: 4 / 2;
 }

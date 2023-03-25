@@ -10,12 +10,42 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.body-diferente {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 40px;
+}
+
+.body-diferente h1,
+p {
+  margin: 0px;
+}
+
+.body-diferente h1 {
+  font-size: 48px;
+  line-height: 1;
+}
+
+.body-diferente p,
+span {
+  font-size: 20px;
+}
+
 .comprar {
   background: #a8f;
   color: #103;
   padding: 15px 20px;
   text-decoration: none;
   border-radius: 4px;
+}
+
+.comprar-diferente {
+  background: #a8f;
+  color: #103;
+  padding: 15px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 20px;
+  grid-row: 4;
 }
 
 .item {
@@ -30,4 +60,43 @@ body {
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr 1fr;
+}
+
+.grid-diferente {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 20px auto auto;
+}
+
+.foto {
+  grid-column: 1 / -1;
+  grid-row: 3;
+}
+
+.titulo {
+  text-align: left;
+}
+
+.preco {
+  background: #ddd;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.body-diferente .preco {
+  place-self: start end;
+}
+
+.body-diferente .comprar-diferente {
+  place-self: center;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.texto {
+  grid-area: 4 / 2;
 }
